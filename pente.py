@@ -17,6 +17,4 @@ pygame.draw.rect(screen, squareColor, squareParams)
 pygame.display.flip()
 
 while game:
-# 	screen.fill('forestgreen')
-# 	screen.fill('dimgrey',((s_width/4,0),(s_width/2,s_height)))
 	 	pygame.display.flip()
