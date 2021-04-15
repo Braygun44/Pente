@@ -3,6 +3,10 @@ import tkinter as tk
 import squares as sq
 import gameSetup as setup
 
+BOARD_AREA_COLOR = (100, 100, 255)
+BOARD_BORDER = (15, 15, 15)
+SCORE_B_COLOR = (255, 255, 255)
+
 root = tk.Tk()
 S_WIDTH = root.winfo_screenwidth()
 S_HEIGHT = root.winfo_screenheight() - 50
@@ -12,11 +16,15 @@ setup = setup.penteSetup(S_WIDTH, S_HEIGHT)
 print(setup)
 
 pygame.init()
-screen = pygame.display.set_mode((S_WIDTH,S_HEIGHT))
+screen = pygame.display.set_mode((S_WIDTH,S_HEIGHT), pygame.RESIZABLE)
 pygame.display.set_caption("Let's Play Pente!!!!")
 game = True
 
-firstSquare = sq.Square(100, 100, 100)
+def drawGameAreas():
+	pygame.draw.rect(screen, BOARD_AREA_COLOR, setup.getBoardParams())
+	pygame.draw.rect(screen, BOARD_BORDER, setup.getBoardParams(), 2)
+
+	pygame.draw.rect(screen, SCORE_B_COLOR, setup.getScoreBParams())
 
 def drawSquare(s, screen):
 	squareParams = s.getDrawParams()
@@ -32,7 +40,10 @@ while game:
 		if event.type == pygame.QUIT:
 			game = False
 			print("peace")
-	drawSquare(firstSquare, screen)
+		if event.type == pygame.MOUSEBUTTONUP:
+			pos = pygame.mouse.get_pos()
+			print(pos)
+	drawGameAreas()
 	pygame.display.flip()
 print("out!")
 pygame.quit()
