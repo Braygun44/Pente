@@ -17,7 +17,7 @@ print(setup)
 
 pygame.init()
 screen = pygame.display.set_mode((S_WIDTH,S_HEIGHT), pygame.RESIZABLE)
-pygame.display.set_caption("Let's Play Pente!!!!")
+pygame.display.set_caption("Pynte")
 game = True
 
 def drawGameAreas():

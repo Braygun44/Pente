@@ -3,11 +3,21 @@ class penteSetup:
         self.sWidth = sWidth
         self.sHeight = sHeight
         #playboard parameters
-        self.boardStartXY = ( self.sWidth * 0.05, self.sHeight * 0.05 )
-        self.boardSizeWH = self.sHeight - self.sHeight * 0.10
+        self.boardStartXY = ( self.sWidth * 0.05, self.sHeight * 0.025 )
+        self.boardSizeWH = self.sHeight - self.sHeight * 0.05
         #scoreboard parameters
-        self.scoreWinXY = (self.sWidth * 0.15 + self.boardSizeWH, self.sHeight * 0.05)
-        self.scoreWinWH = (self.boardSizeWH * (7 / 16), self.sHeight - self.sHeight * 0.10)
+        self.scoreWinXY = (self.sWidth * 0.1 + self.boardSizeWH, self.sHeight * 0.025)
+        self.scoreWinWH = (self.boardSizeWH * (10 / 16), self.sHeight - self.sHeight * 0.05)
+
+    def newParams(self):
+        self.sWidth = sWidth
+        self.sHeight = sHeight
+        #playboard parameters
+        self.boardStartXY = ( self.sWidth * 0.05, self.sHeight * 0.025 )
+        self.boardSizeWH = self.sHeight - self.sHeight * 0.05
+        #scoreboard parameters
+        self.scoreWinXY = (self.sWidth * 0.1 + self.boardSizeWH, self.sHeight * 0.025)
+        self.scoreWinWH = (self.boardSizeWH * (10 / 16), self.sHeight - self.sHeight * 0.05)
 
     def getBoardSizeSide(self):
         return(self.boardSizeWH)
