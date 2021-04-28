@@ -18,7 +18,7 @@ setup = setup.penteSetup(S_WIDTH, S_HEIGHT)
 print(setup)
 
 pygame.init()
-screen = pygame.display.set_mode((S_WIDTH,S_HEIGHT), pygame.RESIZABLE)
+screen = pygame.display.set_mode((setup.getFinalW(),setup.getFinalH()), pygame.RESIZABLE)
 pygame.display.set_caption("Pynte")
 game = True
 
