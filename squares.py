@@ -2,7 +2,7 @@ class Square:
 	dark_color = 1
 	empty = 0
 	light_color = -1
-#
+
 	bg_color = (242, 215, 167)
 	lslategrey = (119, 136, 153)
 
