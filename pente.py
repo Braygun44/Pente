@@ -3,9 +3,11 @@ import tkinter as tk
 import squares as sq
 import gameSetup as setup
 
+BG_BLUE = (66, 218, 245)
 BOARD_AREA_COLOR = (100, 100, 255)
 BOARD_BORDER = (15, 15, 15)
 SCORE_B_COLOR = (255, 255, 255)
+SCORE_B_BORDER = (0, 0, 255)
 
 root = tk.Tk()
 S_WIDTH = root.winfo_screenwidth()
@@ -25,6 +27,7 @@ def drawGameAreas():
 	pygame.draw.rect(screen, BOARD_BORDER, setup.getBoardParams(), 2)
 
 	pygame.draw.rect(screen, SCORE_B_COLOR, setup.getScoreBParams())
+	pygame.draw.rect(screen, SCORE_B_BORDER, setup.getScoreBParams(), 2)
 
 def drawSquare(s, screen):
 	squareParams = s.getDrawParams()
@@ -39,10 +42,11 @@ while game:
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
 			game = False
-			print("peace")
+			print("peace", end=" ")
 		if event.type == pygame.MOUSEBUTTONUP:
 			pos = pygame.mouse.get_pos()
 			print(pos)
+	screen.fill(BG_BLUE)
 	drawGameAreas()
 	pygame.display.flip()
 print("out!")
