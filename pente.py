@@ -46,6 +46,7 @@ while game:
 		if event.type == pygame.MOUSEBUTTONUP:
 			pos = pygame.mouse.get_pos()
 			print(pos)
+		#TODO add pygame.VIDEORESIZE
 	screen.fill(BG_BLUE)
 	drawGameAreas()
 	pygame.display.flip()
