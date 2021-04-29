@@ -24,11 +24,12 @@ game = True
 
 def drawGameAreas():
 	pygame.draw.rect(screen, BOARD_AREA_COLOR, setup.getBoardParams())
-	#pygame.draw.rect(screen, BOARD_BORDER, setup.getBoardParams(), 2)
-
+	drawGameSquares()
+	pygame.draw.rect(screen, BOARD_BORDER, setup.getBoardParams(), 2)
 	pygame.draw.rect(screen, SCORE_B_COLOR, setup.getScoreBParams())
 	pygame.draw.rect(screen, SCORE_B_BORDER, setup.getScoreBParams(), 2)
 
+#TODO add squares to array or something
 def drawGameSquares():
 	for i in range(19):
 		for j in range(19):
@@ -58,7 +59,6 @@ while game:
 			screen = pygame.display.set_mode((setup.getFinalW(), setup.getFinalH()), pygame.RESIZABLE)
 	screen.fill(BG_BLUE)
 	drawGameAreas()
-	drawGameSquares()
 	pygame.display.flip()
 print("out!")
 pygame.quit()
