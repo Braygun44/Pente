@@ -27,6 +27,9 @@ class penteSetup:
     def getBoardSizeSide(self):
         return(self.boardSizeWH)
 
+    def getSpacerValue(self):
+        return(self.spacerValue)
+
     def getBoardParams(self):
         return(self.boardStartXY[0], self.boardStartXY[1], self.boardSizeWH, self.boardSizeWH)
 

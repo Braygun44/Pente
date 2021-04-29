@@ -24,10 +24,16 @@ game = True
 
 def drawGameAreas():
 	pygame.draw.rect(screen, BOARD_AREA_COLOR, setup.getBoardParams())
-	pygame.draw.rect(screen, BOARD_BORDER, setup.getBoardParams(), 2)
+	#pygame.draw.rect(screen, BOARD_BORDER, setup.getBoardParams(), 2)
 
 	pygame.draw.rect(screen, SCORE_B_COLOR, setup.getScoreBParams())
 	pygame.draw.rect(screen, SCORE_B_BORDER, setup.getScoreBParams(), 2)
+
+def drawGameSquares():
+	for i in range(19):
+		for j in range(19):
+			temp_square = sq.Square(int(i * (setup.getBoardSizeSide() / 19) + setup.getSpacerValue()), int(j * (setup.getBoardSizeSide() / 19) + setup.getSpacerValue()), int(setup.getBoardSizeSide() / 19))
+			drawSquare(temp_square, screen)
 
 def drawSquare(s, screen):
 	squareParams = s.getDrawParams()
@@ -52,6 +58,7 @@ while game:
 			screen = pygame.display.set_mode((setup.getFinalW(), setup.getFinalH()), pygame.RESIZABLE)
 	screen.fill(BG_BLUE)
 	drawGameAreas()
+	drawGameSquares()
 	pygame.display.flip()
 print("out!")
 pygame.quit()
