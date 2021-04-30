@@ -65,7 +65,6 @@ while game:
 			w,h = pygame.display.get_surface().get_size()
 			setup.updateSetup(w, h)
 			screen = pygame.display.set_mode((setup.getFinalW(), setup.getFinalH()), pygame.RESIZABLE)
-
 	pygame.display.flip()
 print("out!")
 pygame.quit()

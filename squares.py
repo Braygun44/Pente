@@ -34,3 +34,5 @@ class Square:
 	def isInside(self, coordinates):
 		if self.xLoc <= coordinates[0] < self.xLoc + self.side and self.yLoc <= coordinates[1] < self.yLoc + self.side:
 			return True
+		else:
+			return False
