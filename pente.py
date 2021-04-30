@@ -29,7 +29,6 @@ def drawGameAreas():
 	pygame.draw.rect(screen, scoreboard_background_color, setup.getScoreBParams())
 	pygame.draw.rect(screen, scoreboard_border_color, setup.getScoreBParams(), 2)
 
-#TODO add squares to array or something
 def drawGameSquares():
 	global squares_array
 	squares_array = []
