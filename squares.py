@@ -12,6 +12,14 @@ class Square:
 		self.side = side
 		self.myState = Square.empty
 
+	def updateParams(self, xLoc, yLoc, side):
+		self.xLoc = xLoc
+		self.yLoc = yLoc
+		self.side = side
+
+	# def changeState(self, state):
+	# 	self.myState
+
 	def getDrawParams(self):
 		return(self.xLoc, self.yLoc, self.side, self.side)
 
