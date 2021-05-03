@@ -34,7 +34,7 @@ def drawGameSquares():
 	squares_array = []
 	for i in range(19):
 		for j in range(19):
-			temp_square = sq.Square(int(i * (setup.getBoardSizeSide() / 19) + setup.getSpacerValue()), int(j * (setup.getBoardSizeSide() / 19) + setup.getSpacerValue()), int(setup.getBoardSizeSide() / 19))
+			temp_square = sq.Square(int(i * (setup.getBoardSizeSide() / 19) + setup.getSpacerValue()), int(j * (setup.getBoardSizeSide() / 19) + setup.getSpacerValue()), setup.getSqSize())
 			temp_square.setPos(i, j)
 			squares_array.append(temp_square)
 			drawSquare(temp_square, screen)

@@ -47,3 +47,6 @@ class penteSetup:
 
     def isPortrait(self):
         return not bool(self.landscape)
+
+    def getSqSize(self):
+        return int(self.getBoardSizeSide() / 19)
